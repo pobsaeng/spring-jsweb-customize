@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="../static/../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/../font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="../static/../css/main.css" rel="stylesheet">
+    <script src="../static/../js/jquery.min.js"></script>
+    <script src="../static/../js/popper.min.js"></script>
+    <script src="../static/../js/bootstrap.min.js"></script>
+    <script src="../static/../js/holder.min.js"></script>
+
+    <script src="../static/../actions/common.js"></script>
+    <script src="../static/../actions/paginationUpdate.js"></script>
+    <script src="../static/../actions/page.js"></script>
+    <script src="../static/../actions/dataEditTable.js"></script>
+    <script src="../static/../actions/product.js"></script>
+    <script src="../static/../actions/order.js"></script>
+    <script src="../static/../actions/productType.js"></script>
+    <script src="../static/../actions/user.js"></script>
+    <script src="../static/../actions/home.js"></script>
+    <script src="../static/../actions/about.js"></script>
+    <script>
+        window.onload = function () {
+            showNavBar();
+            changePage('home.html', 'Home');
+        }
+    </script>
+</head>
+
+<body class="p-0">
+    <!-- show navbar -->
+    <div id="navbarComponent"></div>
+
+    <div class="py-5">
+        <div class="container">
+
+            <div class="row">
+                <!-- show content -->
+                <div class="col-sm-12" id="content"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

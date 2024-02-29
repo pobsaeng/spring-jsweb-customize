@@ -1,0 +1,57 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.app'
+version = 'v0.1'
+sourceCompatibility = '11'
+java {
+	archivesBaseName = "spring-js-web-customer"
+}
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly("org.springframework.boot:spring-boot-devtools")
+	runtimeOnly group: 'com.h2database', name: 'h2', version: '1.4.199'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+//Copy a jar into a folder `webapp`
+task copyJar(type: Copy) {
+	dependsOn 'jar'
+	from "build/libs/spring-js-web-customer-${project.version}.jar"
+	into 'build/webapp'
+}
+build.dependsOn copyJar
+
+//Copy the database from a folder `db` to `webapp`
+task copyDB(type: Copy) {
+	dependsOn 'jar'
+	from "db"
+	into 'build/webapp/db'
+}
+build.dependsOn copyDB
+
+/**	./gradlew bootRun 
+	./gradlew --refresh-dependencies
+	./gradle build --refresh-dependencies [Gradle 2.9]
+*/

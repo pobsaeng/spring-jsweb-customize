@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mt-0" href="#">
+        <img src="../icon/manifest-data.png" height="32">Data Management System
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" id="home-link" onClick="javascript:changePage('home.html', 'Home')">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" id="about-link" onClick="javascript:changePage('about.html', 'About')">About</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Back Office
+                        </a>
+                <div class="dropdown-menu active">
+                    <a class="dropdown-item" href="#" id="productType-link" onClick="javascript:changePage('productType.html', 'Product Type', 'initProductType');">Product Type</a>
+                    <a class="dropdown-item" href="#" id="product-link" onClick="javascript:changePage('product.html', 'Product', 'initProduct');">Product</a>
+                    <a class="dropdown-item" href="#" id="order-link" onClick="javascript:changePage('order.html', 'Order')">Order</a>
+                </div>
+            </li>
+        </ul>
+        <ul onClick="logout(event)" class="nav navbar-nav navbar-right py-2">
+            <li>
+                <a href="#" class="btn btn-danger btn-sm" id="btnLogin">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+                </a>
+            </li> 
+        </ul>
+    </div>
+
+</nav>

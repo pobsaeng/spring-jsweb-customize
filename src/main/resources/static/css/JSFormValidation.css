@@ -1,0 +1,15 @@
+.required {
+    /* Marker for required fields */
+    color: red;
+}
+
+.errorMsg {
+    /* for error messages */
+    color: red;
+    font-size: medium;
+}
+
+.errorBox {
+    /* for the error input text fields */
+    border: 2px solid red;
+}

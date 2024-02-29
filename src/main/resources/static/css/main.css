@@ -1,0 +1,70 @@
+ div {
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.tb-btn-fit {
+    width: 1px;
+}
+
+.tb-col-id {
+    padding-top: 7px !important;
+    width: 120px;
+}
+
+.col-btntxt-align {
+    padding-top: 7px !important;
+}
+
+.modal-title {
+    font-size: 130%;
+}
+
+.input-pos-color {
+    background-color: #EAECEE !important;
+}
+
+label {
+    position: static !important;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 767px) {
+    .btn-auto {
+        margin-top: 4px !important;
+        margin-left: 5px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn-auto {
+        margin-top: 31px !important;
+        margin-left: -3px !important;
+        margin-right: -3px !important;
+    }
+}
+
+.btn-pos {
+    max-width: 100%;
+}
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 40px !important;
+}
+
+/* .btn {
+    font-size: 12px !important;
+} */
+
+.table-sm td, .table-sm th {
+    padding: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+table tr td{
+   padding-top:2px !important;
+   padding-bottom:0px !important;
+}
